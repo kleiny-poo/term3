@@ -59,16 +59,23 @@ let inventors = [
  * Print all of the inventors in the inventors array,
  * list their properties
 */
-console.log("------------------Inventors------------------");
-
+console.log("-------------Inventors---------------")
+//for (let i = 0; i< inventors.length; i++) {
+	//console.log(inventors[i].name);
+	console.log(inventors);
+//}
 
 
 
 /* 
  * Print the names of the female inventors
 */
-console.log("---------------Female Inventors--------------");
-
+console.log("---------------Female Inventors-----------");
+for (let i = 0; i < inventors.length; i++) {
+	if(inventors[i].gender == "Female") {
+	console.log(inventors[i].name);
+	}	
+}
 
 
 
@@ -77,7 +84,11 @@ console.log("---------------Female Inventors--------------");
  * Print the names of the male inventors
 */
 console.log("----------------Male Inventors---------------");
-
+ for(let i = 0; i < inventors.length; i++) {
+ 	if(inventors[i].gender == "Male") {
+ 		console.log(inventors[i].name);
+ 	}
+ }
 
 
 
@@ -86,7 +97,9 @@ console.log("----------------Male Inventors---------------");
  * social media. Assign a value of true to the liked
  * property of every other inventor. 
 */
-
+for(let i = 0; i < inventors.length; i = i+2) {
+	inventors[i].liked = true;
+}
 
 
 
@@ -95,5 +108,13 @@ console.log("----------------Male Inventors---------------");
  * Use a loop to count and print the number of liked inventors,
  * meaning inventors whose liked property is set to true
 */ 
+let count = 0;
+for(let i =0; i < inventors.length; i++) {
+	if(inventors[i].liked==true){
+	count++;
+	}
+}
+console.log(count);
+
 
 
