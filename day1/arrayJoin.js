@@ -42,7 +42,7 @@ phrases.splice(4,0,"to");
  * the current index of "umbrella".
 */
 phrases.splice(6,1,);
-phrases.splice(6,0,"are");
+.splice(6,0,"are");
 
 
 
